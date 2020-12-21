@@ -1,32 +1,32 @@
 {"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+        {"tag": "selam",
+         "patterns": ["Selam Nasılsın", "Nasılsın", "Kimse yok mu?", "Merhaba", "İyi Günler", "Naber"],
+         "responses": ["Selam!", "Seni tekrar görmek güzel", "Merhaba nasıl yardımcı olabilirim"],
          "context_set": ""
         },
-        {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+        {"tag": "Güle güle",
+         "patterns": ["Sonra", "Güle güle", "Ben bir Chetbotum", "İyi günler"],
+         "responses": ["Gittiğini görmek üzücü :(", "Sonra konuşuruz", "Güle GÜle!"],
          "context_set": ""
         },
-        {"tag": "age",
-         "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 18 years old!", "18 years young!"],
+        {"tag": "yas",
+         "patterns": ["kaç", "Veysel kaç yaşında", "Yaşın ne", "Kaç yaşındasın", "yaş?"],
+         "responses": ["Ben 18 yaşındayım", "18 sen!"],
          "context_set": ""
         },
-        {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
+        {"tag": "isim",
+         "patterns": ["ismin ne", "sana ne diye hitap etmeliyim", "adın nedir?"],
+         "responses": ["Beni Chacbot olarak çağırabilirsiniz", "ben Chacbot ", "Ben Chacbot, diğer adıyla Tech With Chacbot."],
          "context_set": ""
         },
-        {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+        {"tag": "Dükkan",
+         "patterns": ["Bir şey satın almayı severim", "menüde ne var", "ne önerirsiniz", "yiyecek bir şeyler alabilir miyim"],
+         "responses": ["20 TL'ye çikolata parçacıklı kurabiye satıyoruz", "Çerezler menüde!"],
          "context_set": ""
         },
-        {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
+        {"tag": "saatler",
+         "patterns": ["ne zaman açıksınız", "saatlerin kaç", "çalışma saatleri"],
+         "responses": ["Pazartesi-Cuma günleri 07.00-16.00 açığız!"],
          "context_set": ""
         }
    ]

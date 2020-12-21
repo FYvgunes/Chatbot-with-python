@@ -17,6 +17,7 @@ import json
 import pickle
 import random
 
+
 with  open("intents.json") as file:
     data = json.load(file)
     
@@ -76,11 +77,13 @@ net = tflearn.fully_connected(net,8)
 net = tflearn.fully_connected(net,8)
 net = tflearn.fully_connected(net,len(output[0]), activation = "softmax" )
 net = tflearn.regression(net)
+model = tflearn.DNN(net)
+
 try:
-    model = tflearn.DNN(net)
+    model.load("model.tflearn")
 except:
-    model.fit(training. output,n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model,tflearn")
+    model.fit(training. output, n_epoch=1000, batch_size=8, show_metric=True)
+    model.save("model.tflearn")
 
 
 def bag_of_words(s,words):
@@ -100,21 +103,20 @@ def bag_of_words(s,words):
 def chat():
     print("start talking with the bot")
     while True:
-        inp = input("you : ")
-        if inp.lower()=="quit":
-            break
+        inp = input("you: ")
+        if inp.lower()=="çıkış":
+            print ("Sonra Görüşürüz")
+            break 
         
         result = model.predict([bag_of_words(inp,words)])[0]
         result_index = numpy.argmax(result)
         tag = labels[result_index]
-    
+        
         for tg in data["intents"]:
             if tg['tag'] == tag:
-                 responses = tg['responses']
-        print(random.choice(responses))
-       
-       
-        
+                res = tg['responses']
+        print(random.choice(res))
+                 
 chat()
                              
                                       
